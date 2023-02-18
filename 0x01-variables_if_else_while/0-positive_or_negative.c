@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -26,4 +25,3 @@ printf("%d is negative\n", n);
 }
 return (0);
 }
-
