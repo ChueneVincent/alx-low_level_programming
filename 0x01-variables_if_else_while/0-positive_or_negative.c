@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
- * main – Prints a random number.*
- *
+ * main - main block
+ * Description: Prints a random number and states whether
+ *        it is positive, negative, or zero.
  * Return: Always 0 (Success)
  */
 int main(void)
