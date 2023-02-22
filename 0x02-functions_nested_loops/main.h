@@ -1,6 +1,6 @@
 #ifndef main_h
 #define main_h
-#include <stdio.n>
+#include <stdio.h>
 
 int-putchar(char c);
 void print_alphabet(void);
