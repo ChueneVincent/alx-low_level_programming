@@ -24,7 +24,7 @@ void print_triangle(int size)
 			}
 			for (lines = 1; lines <= row; lines++)
 			{
-				_putchar('-');
+				_putchar(_);
 			}
 			_putchar('\n');
 		}
