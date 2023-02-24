@@ -1,4 +1,4 @@
-#include "main.ih"
+#include "main.h"
 
 /**
  * print_triangle - print triangle
@@ -8,7 +8,7 @@
 
 void print_triangle(int size)
 {
-	int row, lines, spaces;
+	int row, hashes, spaces;
 
 	if (size <= 0)
 	{
@@ -22,12 +22,11 @@ void print_triangle(int size)
 			{
 				_putchar(' ');
 			}
-			for (lines = 1; lines <= row; lines++)
+			for (hashes = 1; hashes <= row; hashes++)
 			{
-				_putchar(_);
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
 	}
 }
-
