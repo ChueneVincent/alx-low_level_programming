@@ -2,41 +2,24 @@
 #include "holberton.h"
 
 /**
-* reverse_array - Reverses the content of an array of integers
-* @a: An array of integers
-* @n: Number of elements to swap
-*
-* Return: Empty
+*  * _strcmp - compare two strings
+ * @s1: string
+ * @s2: strmp
+ * Return: int
 */
-
-void reverse_array(int *a, int n)
-
+int _strcmp(char *s1, char *s2)
 {
-
-	int *d, i, aux, k;
-
-	d = a;
-
-	for (i = 1; i < n; i++)
-
+	while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
 	{
-
-		d++;
-
+		s1++;
+		s2++;
 	}
-
-	for (k = 0; k < i / 2; k++)
-
+	if (*s1 == *s2)
 	{
-
-		aux = a[k];
-
-		a[k] = *d;
-
-		*d = aux;
-
-		d--;
-
+		return (0);
 	}
-
+	else
+	{
+		return (*s1 - *s2);
+	}
 }
