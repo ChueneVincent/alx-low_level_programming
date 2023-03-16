@@ -2,36 +2,37 @@
 #include <stdlib.h>
 
 /**
- * main - adds posiitive numbers
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0 if successful, 1 if error
+ * main - adds positive numbers.
+ * @argc: argument count
+ * @argv: arguments
+ *
+ * Return: 0
  */
-
 int main(int argc, char **argv)
 {
-	int i, j;
-	int sum = 0;
+	int i, n, sum = 0;
+	char *flag;
 
-	if (argc <= 1)
+	if (argc < 2)
 	{
-		printf("%d\n", 0);
+		printf("0\n");
 		return (0);
 	}
 
-	for (i = 1; i < argc; i++)
+	for (i = 1; argv[i]; i++)
 	{
-		for (j = 0; argv[i][j]; j++)
+		n = strtol(argv[i], &flag, 10);
+		if (*flag)
 		{
-			if (!isdigit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
-		sum += atoi(argv[i]);
+		else
+		{
+			sum += n;
+		}
 	}
 	printf("%d\n", sum);
-	return (0);
 
+	return (0);
 }
